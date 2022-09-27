@@ -1,6 +1,5 @@
 #include <iostream> // for std::cout & std::cin
 #include <limits>   // for std::numeric_limits
-#include <string>   // for std::string
 #include <algorithm>
 #include "userInput.h"
 
@@ -15,6 +14,22 @@ void clearCin () {
 	cin.ignore (std::numeric_limits <std::streamsize>::max(), '\n');
 }
 
+// Using unicode, clears the console
+void clear() {
+	cout << "\x1B[2J\x1B[H"; // Clear the console
+}
+
+void clearLine()
+{
+	std::cout << "\x1b[2K"; // Delete current line
+}
+
+void clearPrevLine()
+{
+	std::cout << "\x1b[1A" // Move cursor up one
+		<< "\x1b[2K"; // Delete the entire line
+}
+
 string toUppercase (string input) {
 	string output;
 	std::transform (output.begin(), output.end(), output.begin(),
@@ -22,6 +37,16 @@ string toUppercase (string input) {
 
 	return output;
 }
+
+string toLowercase(string input) {
+	string output;
+	std::transform(output.begin(), output.end(), output.begin(),
+		[](unsigned char c) { return std::tolower(c); });
+
+	return output;
+}
+
+
 
 bool hasChars (string input) {
 	for ( int i{0}; i < input.length(); i++ ) {
@@ -44,10 +69,7 @@ bool isValid (const string input) {
 	return true;
 }
 
-// Using unicode, clears the console
-void clear () {
-	cout << "\x1B[2J\x1B[H";
-}
+
 
 string cinChar (const string question) {
 	return cinChar (question, WHITE);

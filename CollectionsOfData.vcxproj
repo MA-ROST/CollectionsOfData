@@ -132,6 +132,7 @@
     <ClCompile Include="misc.cpp" />
     <ClCompile Include="moreProgramsWithinYou.cpp" />
     <ClCompile Include="myHeartWillGoOn.cpp" />
+    <ClCompile Include="programWithinYou.cpp" />
     <ClCompile Include="theProgramWithinYou.cpp" />
     <ClCompile Include="userInput.cpp" />
     <ClCompile Include="vector.cpp" />
@@ -140,9 +141,14 @@
     <ClInclude Include="misc.h" />
     <ClInclude Include="moreProgramsWithinYou.h" />
     <ClInclude Include="myHeartWillGoOn.h" />
+    <ClInclude Include="programWithinYou.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="theProgramWithinYou.h" />
     <ClInclude Include="userInput.h" />
     <ClInclude Include="vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CollectionsOfData.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

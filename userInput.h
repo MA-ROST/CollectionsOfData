@@ -31,9 +31,14 @@
 #define BG_BR_BLUE 25
 
 void clearCin();
-bool isValid(const std::string input);
 void clear();
+void clearLine();
+void clearPrevLine();
 
+std::string toUppercase(std::string input);
+std::string toLowercase(std::string input);
+
+bool isValid(const std::string input);
 bool hasChars(std::string input);
 std::string cinChar(const std::string question);
 std::string cinChar(const std::string question, int color);
@@ -51,9 +56,9 @@ bool cinBool(const std::string question);
 bool cinBool(const std::string question, int color);
 
 void conOut(const std::string question);
-
-void changeConsoleColor(int color);
 void conOut(const std::string question, int color);
+void changeConsoleColor(int color);
+
 
 bool debugMode();
 
