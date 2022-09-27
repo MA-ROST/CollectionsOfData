@@ -19,7 +19,7 @@ int main ()
                 break;
             case 3: programMPWY(); // moreProgramsWithinYou
                 break;
-            case 4: bioinformatics::program(); // programsWithinYou
+            case 4: bioinfo::program(); // programsWithinYou
                 break;
             default: conOut("Invalid input", BR_RED);
                 break;

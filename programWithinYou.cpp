@@ -2,7 +2,7 @@
 
 #include "ProgramWithinYou.h"
 
-namespace bioinformatics
+namespace bioinfo
 {
 	std::array <std::string, 2> debugStrings ()
 	{

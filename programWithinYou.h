@@ -6,7 +6,7 @@
 #include <algorithm>
 #include "userInput.h"
 
-namespace bioinformatics
+namespace bioinfo
 {
 	const std::array <char, 4> nucleotides = {'A', 'T', 'C', 'G'};
 	std::array <std::string, 2> debugStrings ();
